@@ -1,5 +1,5 @@
 .task{
-    width: 650px;
+    width: 90%;
     height: 50px;
     padding: 10px;
     border: 1px solid transparent;
@@ -20,7 +20,7 @@
 .task .remove-button{
     background-color: #cdb9b9bd;
     cursor: pointer;
-    left:68%;
+    left:90%;
     text-align: center;
     position: absolute;
     font-size: 20px;
