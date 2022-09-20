@@ -1,23 +1,41 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import TasksViewer from './components/tasks-viewer/tasks-viewer.component';
+import TaskInput from './components/task-input/task-input.component';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [tasks, setTasks] = useState([]);
+  const [value, setValue] = useState("");
+  const addTask = (e) => {
+    if (e.key !== 'Enter') {
+      setValue(e.target.value);
+      return;
+    }
+    if (e.target.value === "") {
+      return;
+    }
+    let content = e.target.value;
+    let newTasksArray = tasks.map(
+      (element, idx) => (
+        {
+          id: idx,
+          content: element.content
+        }
+      )
+    )
+    newTasksArray = [...tasks, { id: tasks.length, content: content, done: false }]
+    setValue("");
+    setTasks(newTasksArray);
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='container'>
+        <TaskInput addTask={addTask} value={value} />
+        <TasksViewer tasks={tasks} setTasks={setTasks} />
+      </div>
+
     </div>
   );
 }

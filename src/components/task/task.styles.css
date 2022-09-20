@@ -1,0 +1,32 @@
+.task{
+    width: 650px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin: 10px;
+}
+.content:hover{
+    cursor: pointer;
+}
+.content{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    text-decoration-color: black;
+
+}
+
+.task .remove-button{
+    background-color: #cdb9b9bd;
+    cursor: pointer;
+    left:68%;
+    text-align: center;
+    position: absolute;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 12px;
+    width: 30px;
+    height: 30px;
+}
