@@ -1,6 +1,7 @@
 .container{
-  position: absolute;
-  top: 50px;
-  left: calc(50% - 22% );
-  width: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+margin:auto ;
 }

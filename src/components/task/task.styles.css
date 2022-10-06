@@ -5,6 +5,7 @@
     border: 1px solid transparent;
     border-radius: 10px;
     margin: 10px;
+    margin-left:100px;
 }
 .content:hover{
     cursor: pointer;
@@ -29,4 +30,26 @@
     margin: 12px;
     width: 30px;
     height: 30px;
+}
+@media (max-width:400px) {
+    .task{
+        margin-left: 10px;
+    }
+
+    .task .remove-button{
+        
+        left: 75%;
+    }
+    
+}
+@media (min-width:401px) and (max-width:1000px) {
+    .task{
+        margin-left: 10px;
+    }
+
+    .task .remove-button{
+        
+        left: 85%;
+    }
+    
 }

@@ -1,12 +1,38 @@
 .add-task{
     background-color: rgb(242 242 242 / 19%);
-    width: 700px;
+
     padding: 12px 30px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    margin-left: 146px;
+    margin-left: 50px;
     margin-bottom: 50px;
-    height: 60px;
     font-size: 30px;
 }
+/* mobile screens */
+@media (max-width: 700px) {
+    .add-task{
+        width: 250px;
+        height: 35px;
+        margin-left:0px;
+    }
+   
+}
+
+/* Medium Screens */
+
+@media (min-width: 992px) {
+    .add-task{
+        width: 500px;
+        height: 45px;
+    }
+}
+
+/* Large Screens */
+@media (min-width: 1200px) {
+    .add-task{
+        width: 60%;
+        height: 60px;
+    }
+}
+
